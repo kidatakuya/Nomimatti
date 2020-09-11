@@ -36,15 +36,16 @@
             <h2>ログイン</h2>
             <div class="wrap__login__innerwrap__register-group">
               <label for="name">名前</label>
-              <input type="text" name="name" placeholder="木田匠哉" />
+              <input type="text" name="name" placeholder="木田匠哉" class="name"/>
               <label for="address">携帯番号またはメールアドレス</label>
-              <input
+              <input 
+                class="address"
                 type="text"
                 name="address"
                 placeholder="nomimatti@gmail.com"
               />
               <label for="password">パスワード</label>
-              <input type="password" name="pass" placeholder="パスワード設定" />
+              <input type="password" name="pass" placeholder="パスワード設定" class="pass" />
             </div>
             <button type="button" class="wrap__login__innerwrap__loginbtn">
               ログイン
@@ -62,17 +63,18 @@
             <h2>アカウント登録</h2>
             <div class="wrap__login__innerwrap__register-group">
               <label for="name">名前</label>
-              <input type="text" name="name" placeholder="木田匠哉" />
+              <input type="text" name="name" placeholder="木田匠哉" class="name" />
               <label for="address">携帯番号またはメールアドレス</label>
               <input
+              class="address"
                 type="text"
                 name="address"
                 placeholder="nomimatti@gmail.com"
               />
               <label for="password">パスワード</label>
-              <input type="password" name="pass" placeholder="パスワード設定" />
+              <input type="password" name="pass" placeholder="パスワード設定" class="pass" />
               <label for="password">パスワード確認</label>
-              <input type="password" name="pass" placeholder="パスワード確認" />
+              <input type="password" name="pass" placeholder="パスワード確認" id="passConfirmation" />
             </div>
             <button type="button" class="wrap__login__innerwrap__loginbtn">
               アカウント登録

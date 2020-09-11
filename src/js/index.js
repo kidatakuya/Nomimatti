@@ -1,18 +1,4 @@
 window.onload = () => {
-  //   const box = document.getElementById("box");
-  //   const btn = document.getElementsByClassName("btn");
-  //   const top = document.getElementsByClassName("top");
-  //   const topLeft = document.getElementsByClassName("top_left");
-  //   const left = document.getElementsByClassName("left");
-  //   const leftBottom = document.getElementsByClassName("left_bottom");
-  //   const bottom = document.getElementsByClassName("bottom");
-  //   const rightBottom = document.getElementsByClassName("right_bottom");
-  //   const right = document.getElementsByClassName("right");
-  //   const topRight = document.getElementsByClassName("top_right");
-  //   const center = document.getElementsByClassName("center");
-  //   const innerbox = document.getElementsByClassName("innerbox");
-  //   const navbox = document.getElementsByClassName("navbox");
-  //   const nav = document.getElementsByClassName("nav");
   const widowWarp = document.getElementById("widow");
   const loginbtnF = document.getElementById("loginbtn");
   const returnArrow = document.getElementsByClassName("return");
@@ -20,13 +6,12 @@ window.onload = () => {
   const loginbtn = document.querySelectorAll(
     ".wrap__login__innerwrap__loginbtn"
   );
-  //   let boxW = [0, -100, -200, 0, -100, -200, 0, -100, -200];
-  //   let boxH = [0, 0, 0, -100, -100, -100, -200, -200, -200];
+  const name = document.getElementsByClassName("name");
+  const address = document.getElementsByClassName("address");
+  const pass = document.getElementsByClassName("pass");
+  const passConfirmation = document.getElementById("passConfirmation");
   let w = 0;
 
-  // let div = document.createElement("div");
-  // div.className="wall";
-  // let i = 0;
   loginbtnF.onclick = () => {
     w = w - 100;
     widowWarp.style.transform = " translateX(" + w + "vw)";
@@ -47,11 +32,29 @@ window.onload = () => {
     };
   }
 
-  loginbtn.forEach((element) => {
-    element.onclick = () => {
-      window.location.href = "home.html";
+  for(let f=0;f<=loginbtn.length-1;f++){
+    loginbtn[f].onclick = () => {
+      let regex=new RegExp(/.@/);
+      let test =new RegExp(/[0-9]{11}/);
+      if( name[f].value.length > 1 && pass[f].value.length >= 5 && test.test(address[f].value) || regex.test(address[f].value)){
+        if(f = 1){
+          if(pass[f].value === passConfirmation.value){
+            
+            window.location.href = "home.html";
+          }
+          else{
+            console.log("aaaaa")
+            window.location.href = "home.html";
+          }
+        }
+      }else{
+        alert("間違っています")
+      }
+     
     };
-  });
+  }
+   
+ 
 
   // })
 
