@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/home.css" />
+    <title>Nomimatti-HOME</title>
+  </head>
+  <body>
+    <!-- <div id="wrap"> -->
+    <header class="head" id="head">
+      <nav class="head__navbox">
+        <div>
+          <span></span>
+        </div>
+      </nav>
+      <h1 class="head__logo" id="headTitle">ホーム</h1>
+      <!-- <button id="cancel">キャンセル</button>
+           <button id="submit">送信</button> -->
+    </header>
+
+    <!-- main、ホーム画面全体 -->
+    <main class="main">
+      <div class="main__window" id="window">
+        <!-- //投稿表示場面 -->
+        <section class="main__window__board">
+          <!-- 1投稿画面 -->
+          <section class="main__window__board__box">
+            <div class="main__window__board__box__icon">
+              <img src="img/usericon.svg" alt="" />
+            </div>
+            <p class="main__window__DM__box__sendTime">2020/12/06</p>
+            <div class="main__window__board__box__textbox">
+              <h2>
+                <span class="main__window__board__box__textbox__title"
+                  >見出し</span
+                >
+              </h2>
+              <p class="main__window__board__box__textbox__time">18:00~20:00</p>
+              <p class="main__window__board__box__textbox__text">
+                鳥貴族へ飲みに行きませんか？
+              </p>
+            </div>
+          </section>
+        </section>
+
+        <!-- 決済、QR画面 -->
+        <section class="content main__window__QR">
+          <div class="main__window__QR__box">
+            <div class="main__window__QR__box__barcode">
+              <p>バーコード</p>
+            </div>
+            <div class="main__window__QR__box__QRcord">
+              <p>QR</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 投稿画面 -->
+        <section class="main__window__post">
+          <form action="" class="main__window__post__innerwrap">
+            <label for="">見出し</label>
+            <input
+              type="text"
+              class="main__window__post__innerwrap__title postText"
+              placeholder="〜店に飲みに行きませんか？"
+            />
+            <label for="">時間</label>
+            <input
+              type="text"
+              class="main__window__post__innerwrap__time postText"
+              placeholder="18:00~20:00"
+            />
+            <div class="main__window__post__innerwrap__shop">
+              <label for=""
+                >店舗<span>（選択するとクーポンがもらえます。）</span></label
+              >
+              <select name="" id="">
+                <option value="1">店舗指定なし</option>
+                <option value="2">鳥貴族</option>
+                <option value="3">牛角</option>
+                <option value="4">ワンカルビ</option>
+                <option value="5">千歳</option>
+                <option value="6">口八丁</option>
+              </select>
+            </div>
+            <label for="">詳しい内容</label>
+            <textarea
+              class="main__window__post__innerwrap__text postText"
+              placeholder="今日、18:00から ~ 店で一緒に飲んでくれる人いますか？"
+            ></textarea>
+            <!-- <input type="text" class="main__window__post__innerwrap__text postText" placeholder="今日、18:00から ~ 店で一緒に飲んでくれる人いますか？"> -->
+            <div class="main__window__post__innerwrap__btnBox">
+              <button class="cancel">キャンセル</button>
+              <button class="send" id="postbtn">送信</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- //DM場面 -->
+        <section class="main__window__DM">
+          <!-- 1投稿画面 -->
+          <section class="main__window__DM__box">
+            <div class="main__window__DM__box__icon">
+              <img src="img/usericon.svg" alt="" />
+            </div>
+            <p class="main__window__DM__box__sendTime">2020/12/06</p>
+            <div class="main__window__DM__box__textbox">
+              <h2>
+                <span class="main__window__DM__box__textbox__name"
+                  >ユーザーネーム</span
+                >
+              </h2>
+              <p class="main__window__DM__box__textbox__time">18:00~20:00</p>
+              <p class="main__window__DM__box__textbox__text">
+                鳥貴族へ飲みに行きませんか？
+              </p>
+            </div>
+          </section>
+        </section>
+
+        <section class="main__window__profile">
+          <div class="main__window__profile__photoBox">
+            <div class="main__window__profile__photoBox__backphoto"></div>
+            <div class="main__window__profile__photoBox__icon">
+              <img src="img/usericon.svg" alt="" />
+            </div>
+          </div>
+          <div class="main__window__profile__textWrap">
+            <h2
+              class="main__window__profile__textWrap__text profileName decision-text"
+            >
+              才のき　ひろし
+            </h2>
+            <p
+              class="main__window__profile__textWrap__text profileBirthday decision-text"
+            ></p>
+            <p
+              class="main__window__profile__textWrap__text profileIntroduction decision-text"
+            ></p>
+            <p
+              class="main__window__profile__textWrap__text profileHobby decision-text"
+            ></p>
+            <p
+              class="main__window__profile__textWrap__text profileFrom decision-text"
+            ></p>
+          </div>
+          <button class="main__window__profile__editbtn" id="editbtn">
+            プロフィール編集
+          </button>
+          <div class="main__window__profile__postBox">
+            <h3 class="main__window__profile__postBox__title">過去の投稿</h3>
+            <div class="main__window__profile__postBox__postPast">
+              <section class="main__window__profile__postBox__box">
+                <div class="main__window__profile__postBox__box__icon">
+                  <img src="img/usericon.svg" alt="" />
+                </div>
+                <p class="main__window__profile__postBox__box__sendTime">
+                  2020/12/06
+                </p>
+                <div class="main__window__profile__postBox__box__textbox">
+                  <h2>
+                    <span
+                      class="main__window__profile__postBox__box__textbox__name"
+                      >ユーザーネーム</span
+                    >
+                  </h2>
+                  <p class="main__window__profile__postBox__box__textbox__time">
+                    18:00~20:00
+                  </p>
+                  <p class="main__window__profile__postBox__box__textbox__text">
+                    鳥貴族へ飲みに行きませんか？
+                  </p>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- プロフィール設定画面 -->
+      <section class="main__profile-edit" id="profile-edit">
+        <div class="main__profile-edit__photoBox">
+          <div class="main__profile-edit__photoBox__backphoto"></div>
+          <div class="main__profile-edit__photoBox__icon">
+            <img src="img/usericon.svg" alt="" />
+          </div>
+        </div>
+        <form class="main__profile-edit__textBox">
+          <div class="main__profile-edit__textBox__innerwarp">
+            <label>名前</label>
+            <input
+              type="text"
+              class="text"
+              id="name"
+              placeholder="木田　匠哉"
+            />
+          </div>
+          <div class="main__profile-edit__textBox__innerwarp">
+            <label>生年月日</label>
+            <input
+              type="text"
+              class="text"
+              id="birthday"
+              placeholder="2020/12/12"
+            />
+          </div>
+          <div class="main__profile-edit__textBox__innerwarp">
+            <label>自己紹介</label>
+            <textarea
+              class="text"
+              id="introduction"
+              placeholder="大阪で働いています"
+            ></textarea>
+          </div>
+          <div class="main__profile-edit__textBox__innerwarp">
+            <label>趣味</label>
+            <input type="text" class="text" id="hobby" placeholder="サッカー" />
+          </div>
+          <div
+            class="main__profile-edit__textBox__innerwarp"
+            placeholder="サッカー"
+          >
+            <label>出身</label>
+            <input type="text" class="text" id="from" placeholder="大阪" />
+          </div>
+          <button
+            type="button"
+            class="main__profile-edit__textBox__btn"
+            id="profile-edit-decision"
+          >
+            プロフィール変更
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <nav class="foot__navbox">
+        <div class="foot__navbox__nav navMove">
+          <div class="foot__navbox__nav__group-s">
+            <img src="img/home.svg" alt="QR" />
+            <p>ホーム</p>
+          </div>
+        </div>
+        <div class="foot__navbox__nav navMove">
+          <div class="foot__navbox__nav__group-s">
+            <img src="img/QR.svg" alt="QR" />
+            <p>QR決済</p>
+          </div>
+        </div>
+        <div class="foot__navbox__nav"></div>
+        <div class="foot__navbox__nav navMove">
+          <div class="foot__navbox__nav__group">
+            <img src="img/post.svg" alt="QR" />
+            <p>投稿</p>
+          </div>
+        </div>
+        <div class="foot__navbox__nav navMove">
+          <div class="foot__navbox__nav__group-s">
+            <img src="img/DM.svg" alt="QR" />
+            <p>DM</p>
+          </div>
+        </div>
+        <div class="foot__navbox__nav navMove">
+          <div class="foot__navbox__nav__group-s">
+            <img src="img/usericon.svg" alt="QR" />
+            <p>アカウント</p>
+          </div>
+        </div>
+      </nav>
+    </footer>
+    <!-- </div> -->
+
+    <script src="js/home.js"></script>
+  </body>
+</html>
