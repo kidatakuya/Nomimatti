@@ -1,0 +1,13 @@
+.practice01 .box {
+  border: solid 1px tomato;
+  width: calc(300px + 30px);
+}
+
+.practice06 .titleWrap {
+  background-color: skyblue;
+  color: #b9b9b9;
+}
+
+.practice07 .titleWrap {
+  color: tomato;
+}

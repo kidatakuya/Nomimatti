@@ -1,0 +1,24 @@
+@charset "UTF-8";
+.practice01 h1 {
+  font-size: 2rem;
+  color: skyblue;
+}
+
+.practice01 ul li {
+  border: solid 1px tomato;
+}
+
+.practice02 .pageNavi a:hover {
+  background-color: tomato;
+}
+
+.practice03 h3 {
+  /**sass形式でもOK*/
+  padding-left: 10px;
+  border-left: 10px solid skyblue;
+  border-bottom: 1px solid skyblue;
+}
+
+.practice05 .topicTitle {
+  color: tomato;
+}

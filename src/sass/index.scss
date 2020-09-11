@@ -1,0 +1,130 @@
+@import "_ress";
+@import "_ver";
+@import "_common";
+
+.widow {
+  // 全体
+  overflow: hidden;
+  //   margin: 0 auto;
+  //   max-width: 640px;
+  width: 100vw;
+  height: 100vh;
+  //   transform: translateX("-300vw");
+  .box {
+    // max-width: 640px;
+    width: 100vw;
+    height: 100vh;
+    // overflow: hidden;
+  }
+
+  .wrap {
+    width: 300vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    &__firstbox {
+      background: $indexback;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &__innerwrap {
+        width: 75%;
+        margin: 0 auto;
+        &__logo {
+          width: 18.8em;
+          height: 17.2em;
+          background-image: url("../img/logo.svg");
+          margin: 0 auto;
+        } //&__logo
+        &__text {
+          font-size: 1.4em;
+          color: $fontColor;
+          margin-top: 3.2rem;
+        } //&__text
+        &__loginbtn {
+          @extend .btn;
+          background-color: $accentColor;
+          margin-top: 3.2rem;
+        } //&__loginbtn
+        &__signupbtn {
+          @extend .btn;
+          background-color: $btnBack;
+          margin-top: 1.6rem;
+        } //&__signupbtn
+      } //&__innerwrap
+    } // &__firstbox（１画面）
+
+    &__login {
+      //（１画面）sign up込
+      background-color: #fafafa;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &__head {
+        width: 100%;
+        height: 4.8rem;
+        background: $headerColor;
+        position: absolute;
+        top: 0;
+        h1 {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            height: 3.2rem;
+          }
+        }
+        .return {
+          width: 1.6rem;
+          height: 1.6rem;
+          background-image: url(../img/left-arrow.svg);
+          position: absolute;
+          left: 1.6rem;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          cursor: pointer;
+        }
+      } //&__head
+      &__innerwrap {
+        width: 80%;
+        h2 {
+          text-align: center;
+          font-size: 2.4rem;
+          margin-bottom: 4rem;
+        }
+        &__register-group {
+          width: 100%;
+          background-color: #fff;
+          padding: 1.6rem;
+          border-radius: 0.8rem;
+          margin: 4rem 0;
+          label {
+            width: 100%;
+            font-weight: bold;
+            font-size: 1.4rem;
+          }
+          input {
+            width: 100%;
+            border-bottom: $lineColor solid 1px;
+            margin-bottom: 2.4rem;
+            font-size: 1.4rem;
+            padding: 8px 0;
+            outline: none;
+            cursor: pointer;
+            &::placeholder {
+              color: $placeholderColor;
+            }
+          }
+        } //&__register-group
+        &__loginbtn {
+          @extend .btn;
+          background-color: $mainColor;
+        }
+      } // &__innerwrap
+    } //&__login
+  } //.wrap(全体画面)
+}
