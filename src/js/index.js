@@ -34,25 +34,31 @@ window.onload = () => {
 
   for(let f=0;f<=loginbtn.length-1;f++){
     loginbtn[f].onclick = () => {
+    // function send(){
       let regex=new RegExp(/.@/);
       let test =new RegExp(/[0-9]{11}/);
-      if( name[f].value.length > 1 && pass[f].value.length >= 5 && test.test(address[f].value) || regex.test(address[f].value)){
+      let frm = document.signUp;
+      if( frm.elements["name"].value.length > 1 && frm.elements["password"].value.length >= 5 && test.test(frm.elements["address"].value) || regex.test(frm.elements["address"].value)){
         if(f = 1){
-          if(pass[f].value === passConfirmation.value){
+          if(frm.elements["password"].value === passConfirmation.value){
             
-            window.location.href = "home.html";
+            frm.action = "connect.php";
+            return true;
           }
           else{
-            console.log("aaaaa")
-            window.location.href = "home.html";
+            alert("間違っています")
+            return false;
           }
         }
       }else{
         alert("間違っています")
+        return false;
       }
+    }
+      
      
     };
-  }
+  // }
    
  
 

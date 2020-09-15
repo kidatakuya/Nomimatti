@@ -1,3 +1,19 @@
+<!-- <?php
+
+// session_start();
+// require ('connect.php');
+// $statement = $db->prepare('INSERT INTO members SET name=?, address=?,password=?,created_at=NOW()');
+// $statement->execute(array(
+//   $_SESSION['join']['name'],
+//   $_SESSION['join']['address'],
+//   sha1($_SESSION['join']['password'])
+// ));
+//   unset($_SESSION['join']);
+//   header('Location: home.html');
+//   exit();
+
+
+?> -->
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -36,16 +52,16 @@
             <h2>ログイン</h2>
             <div class="wrap__login__innerwrap__register-group">
               <label for="name">名前</label>
-              <input type="text" name="name" placeholder="木田匠哉" class="name"/>
+              <input type="text" name="loginName" placeholder="木田匠哉" class="name"/>
               <label for="address">携帯番号またはメールアドレス</label>
               <input 
-                class="address"
+                class="loginAddress"
                 type="text"
                 name="address"
                 placeholder="nomimatti@gmail.com"
               />
               <label for="password">パスワード</label>
-              <input type="password" name="pass" placeholder="パスワード設定" class="pass" />
+              <input type="password" name="loginPass" placeholder="パスワード設定" class="pass" />
             </div>
             <button type="button" class="wrap__login__innerwrap__loginbtn">
               ログイン
@@ -59,24 +75,24 @@
             <div class="return"></div>
             <h1><img src="img/logo-notext.svg" alt="" /></h1>
           </header>
-          <form class="wrap__login__innerwrap" action="">
+          <form class="wrap__login__innerwrap" name="signUp" action="" method="POST">
             <h2>アカウント登録</h2>
             <div class="wrap__login__innerwrap__register-group">
               <label for="name">名前</label>
               <input type="text" name="name" placeholder="木田匠哉" class="name" />
               <label for="address">携帯番号またはメールアドレス</label>
               <input
-              class="address"
+                class="address"
                 type="text"
                 name="address"
                 placeholder="nomimatti@gmail.com"
               />
               <label for="password">パスワード</label>
-              <input type="password" name="pass" placeholder="パスワード設定" class="pass" />
+              <input type="password" name="password" placeholder="半角英数5文字以上" class="pass" />
               <label for="password">パスワード確認</label>
               <input type="password" name="pass" placeholder="パスワード確認" id="passConfirmation" />
             </div>
-            <button type="button" class="wrap__login__innerwrap__loginbtn">
+            <button type="submit" name="sigebtn" class="wrap__login__innerwrap__loginbtn">
               アカウント登録
             </button>
           </form>
