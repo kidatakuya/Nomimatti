@@ -37,23 +37,60 @@ window.onload = () => {
     // function send(){
       let regex=new RegExp(/.@/);
       let test =new RegExp(/[0-9]{11}/);
-      let frm = document.signUp;
-      if( frm.elements["name"].value.length > 1 && frm.elements["password"].value.length >= 5 && test.test(frm.elements["address"].value) || regex.test(frm.elements["address"].value)){
-        if(f = 1){
-          if(frm.elements["password"].value === passConfirmation.value){
-            
-            frm.action = "connect.php";
+      // let frm = document.signUp;
+      // let frmlog = document.login;
+      let checkCount = 0;
+      let checkText = "";
+
+      function check(frm){
+        if( frm.elements["name"].value.length >= 1  ){
+          checkCount++;
+        }else{
+          checkText = checkText + "名前、";
+        }
+        if(test.test(frm.elements["address"].value) || regex.test(frm.elements["address"].value)){
+          checkCount++;
+        }else{
+          checkText = checkText + "アドレス、";
+        }
+          if(frm.elements["password"].value.length >= 5){
+            checkCount++;
+          }else{
+            checkText = checkText + "パスワード、";
+          }
+          if(checkCount === 3){
+            if(f === 1){
+  
+              if(frm.elements["password"].value === passConfirmation.value){ 
+                frm.action = "connect.php";
+              }else{
+                checkText = checkText + "パスワード確認"
+                alert(checkText + "間違っています")
+              }
+          }else{
+            // console.log('aaa')
+            frm.action = "login.php";
             return true;
           }
-          else{
-            alert("間違っています")
-            return false;
-          }
+  
+         
+          
+        }else{
+          alert(checkText + "間違っています")
         }
-      }else{
-        alert("間違っています")
-        return false;
       }
+
+
+
+      if( f === 0 ){
+        check(document.login)
+      }else{
+        check(document.signUp)
+      }
+
+      
+
+      
     }
       
      

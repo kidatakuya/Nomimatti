@@ -125,11 +125,19 @@
       @extend .content;
       color: $textColor;
       overflow: scroll;
+      &__aperture{
+        width: 50px;
+        background-color: aqua;
+        &__inner{
+          padding: 0.8rem 1.6rem;
+          background-color: aqua;
+        }
+      }
       &__box {
         display: flex;
         cursor: pointer;
         width: 100%;
-        padding: 16px;
+        padding: 24px 16px;
         border-bottom: 1px solid $lineColor;
         // background-color: red;
         position: relative;
@@ -144,6 +152,7 @@
         }
         &__icon {
           width: 40px;
+          flex-grow: 1;
           height: 40px;
           border-radius: 50%;
           border-bottom: 1px solid $lineColor;
@@ -153,10 +162,13 @@
           justify-content: center;
         }
         &__textbox {
+          // width: 85%;
+          flex-grow: 5;
           padding: 0 11px;
           &__title {
             font-size: 14px;
             color: $titleColor;
+
           }
         }
       }

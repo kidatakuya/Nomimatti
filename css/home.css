@@ -562,11 +562,21 @@ select {
   overflow: scroll;
 }
 
+.main__window__board__aperture {
+  width: 50px;
+  background-color: aqua;
+}
+
+.main__window__board__aperture__inner {
+  padding: 0.8rem 1.6rem;
+  background-color: aqua;
+}
+
 .main__window__board__box {
   display: flex;
   cursor: pointer;
   width: 100%;
-  padding: 16px;
+  padding: 24px 16px;
   border-bottom: 1px solid #dbdbdb;
   position: relative;
 }
@@ -584,6 +594,7 @@ select {
 
 .main__window__board__box__icon {
   width: 40px;
+  flex-grow: 1;
   height: 40px;
   border-radius: 50%;
   border-bottom: 1px solid #dbdbdb;
@@ -594,6 +605,7 @@ select {
 }
 
 .main__window__board__box__textbox {
+  flex-grow: 5;
   padding: 0 11px;
 }
 

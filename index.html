@@ -48,11 +48,11 @@
             <div class="return"></div>
             <h1><img src="img/logo-notext.svg" alt="" /></h1>
           </header>
-          <form class="wrap__login__innerwrap" action="">
+          <form class="wrap__login__innerwrap" action="" name="login" method="POST">
             <h2>ログイン</h2>
             <div class="wrap__login__innerwrap__register-group">
               <label for="name">名前</label>
-              <input type="text" name="loginName" placeholder="木田匠哉" class="name"/>
+              <input type="text" name="name" placeholder="木田匠哉" class="name"/>
               <label for="address">携帯番号またはメールアドレス</label>
               <input 
                 class="loginAddress"
@@ -61,9 +61,9 @@
                 placeholder="nomimatti@gmail.com"
               />
               <label for="password">パスワード</label>
-              <input type="password" name="loginPass" placeholder="パスワード設定" class="pass" />
+              <input type="password" name="password" placeholder="パスワード設定" class="pass" />
             </div>
-            <button type="button" class="wrap__login__innerwrap__loginbtn">
+            <button class="wrap__login__innerwrap__loginbtn">
               ログイン
             </button>
           </form>
@@ -92,7 +92,7 @@
               <label for="password">パスワード確認</label>
               <input type="password" name="pass" placeholder="パスワード確認" id="passConfirmation" />
             </div>
-            <button type="submit" name="sigebtn" class="wrap__login__innerwrap__loginbtn">
+            <button name="sigebtn" class="wrap__login__innerwrap__loginbtn">
               アカウント登録
             </button>
           </form>
