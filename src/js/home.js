@@ -9,7 +9,9 @@ window.onload = () => {
   const decisionText = document.getElementsByClassName("decision-text");
   const text = document.getElementsByClassName("text");
   const postBtn = document.getElementById("postbtn");
-
+  const postText = document.getElementsByClassName("main__window__post__innerwrap__time postText")
+  const board = document.getElementById("board");
+  
   let move = [
     {
       title: "ホーム",
@@ -36,6 +38,11 @@ window.onload = () => {
   // footer ページ移動
   for (let i = 0; i <= nav.length - 1; i++) {
     nav[i].addEventListener("click", () => {
+      console.log(document.defaultView.getComputedStyle(profileEdit,null).right)
+      if( document.defaultView.getComputedStyle(profileEdit,null).right == "0px"){
+        profileEdit.style.right = "";
+        console.log("test");
+      }
       if (i === 4) {
         head.style.top = "-100%";
         window.style.transform = "translateX(" + move[i].move + "vw)";
@@ -60,4 +67,16 @@ window.onload = () => {
     // console.log(text[0].value);
     profileEdit.style.right = "";
   }; //editbtn.onclick
+
+  // postBtn.onclick=()=>{
+  //   let section =  div = document.createElement('section');
+  //   let boardBox = section.className("main__window__board__box");
+  //   let 
+  //   // board.section
+
+  // }
+
+
+
+
 }; //window.onload

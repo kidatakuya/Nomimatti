@@ -126,11 +126,23 @@
       color: $textColor;
       overflow: scroll;
       &__aperture{
-        width: 50px;
-        background-color: aqua;
+        width: 100%;
+        // background-color: aqua;
         &__inner{
+          display: flex;
+          overflow-x: scroll;
           padding: 0.8rem 1.6rem;
-          background-color: aqua;
+          border-bottom: 1px solid $lineColor;
+          // background-color: aqua;
+          &__category{
+            // border: 1px solid #000;
+            text-align: center;
+            border-radius: 6px;
+            background-color: $accentColor;
+            color: $fontColor;
+            margin: 0 8px;
+            padding: 4px 8px;
+          }
         }
       }
       &__box {
@@ -145,14 +157,14 @@
           font-size: 1.2rem;
           position: absolute;
           right: 3.2rem;
-          top: 1.2rem;
+          top: 0.8rem;
         }
         &:first-child {
           border-top: 1px solid $lineColor;
         }
         &__icon {
           width: 40px;
-          flex-grow: 1;
+          // flex-grow: 1;
           height: 40px;
           border-radius: 50%;
           border-bottom: 1px solid $lineColor;
@@ -334,7 +346,9 @@
         &__backphoto {
           width: 100%;
           height: 100%;
-          background-color: $backphoto;
+          background-image: url(../img/back-img.jpeg);
+          background-position: center;
+          background-size: cover;
         }
         &__icon {
           width: 8.8rem;
@@ -411,7 +425,9 @@
       &__backphoto {
         width: 100%;
         height: 100%;
-        background-color: $backphoto;
+        background-image: url(../img/back-img.jpeg);
+        background-position: center;
+        background-size: cover;
       }
       &__icon {
         width: 8.8rem;
