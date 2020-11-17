@@ -1,7 +1,7 @@
 <?php
 session_start();
 try{
-    $db = new PDO('mysql:dbname=Nomimatti;host=localhost;charset=utf8','root','root');
+    $db = new PDO('mysql:dbname=tkida;host=localhost;charset=utf8','tkida','eccMyAdmin');
 
     if(!empty($_POST)){
        
@@ -10,7 +10,7 @@ try{
         $password = sha1($_POST['password']);
         // print($name);
         // $login = $db->prepare("SELECT * FROM members WHERE name=? AND address=? AND password=?");
-        $login = $db->query("SELECT * FROM members WHERE name='{$name}' AND address='{$address}' AND password='{$password}'");
+        $login = $db->query("SELECT * FROM Nomimatti_members WHERE name='{$name}' AND address='{$address}' AND password='{$password}'");
         $login;
     //    $login->sxcuet(array(
     //     $_POST['name'],

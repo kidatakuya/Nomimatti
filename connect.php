@@ -1,7 +1,8 @@
 <?php
 session_start();
 try{
-    $db = new PDO('mysql:dbname=Nomimatti;host=localhost;charset=utf8','root','root');
+    // $db = new PDO('mysql:dbname=local;host=localhost;charset=utf8','root','root');
+    $db = new PDO('mysql:dbname=tkida;host=localhost;charset=utf8','tkida','eccMyAdmin');
 
     if(!empty($_POST)){
         $name = $_POST['name'];
@@ -11,7 +12,7 @@ try{
     //    $db->query("INSERT INTO `members`( `name`, `address`, `password`, `picture`, `created`, `modified`) VALUES ('{$name}','{$address}','{$password}','',NOW(),'')");
 
 
-       $db->query( "INSERT INTO members SET name='{$name}', address='{$address}', password='{$password}'");
+       $db->query( "INSERT INTO Nomimatti_members SET name='{$name}', address='{$address}', password='{$password}'");
     //    echo $statement->execute(array(
         // $_SESSION['join']['name'],
         // $_SESSION['join']['address'],
